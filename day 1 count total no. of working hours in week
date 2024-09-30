@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+int T; 
+    cin >> T;// your code goes here
+ while (T--) {
+        int X, Y;
+        cin >> X >> Y;
+          int totalHours = (X * 4) + Y;
+        cout<< totalHours<< endl;
+    }
+}
