@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    // Declare the topics Chef has prepared
+    string A, B, C, X;
+    cin >> A >> B >> C >> X; // Read the topics
+
+    // Check if X matches any of the topics A, B, or C
+    if (X == A || X == B || X == C) {
+        cout << "Yes" << endl; // Chef can win
+    } else {
+        cout << "No" << endl; // Chef cannot win
+    }
+
+    return 0;
+}
