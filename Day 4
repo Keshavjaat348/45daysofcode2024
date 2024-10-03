@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int maxPeopleInRoom(int X, vector<int>& A) {
+    int people = X;
+    int maxPeople = X;
+
+    for (int i = 0; i < A.size(); i++) {
+        if (A[i] >= 0) {
+            people += A[i];
+        } else {
+            people -= abs(A[i]);
+        }
+        maxPeople = max(maxPeople, people);
+    }
+
+    return maxPeople;
+}
+
+int main() {
+    int T; // number of test cases
+    cin >> T;
+
+    while (T--) {
+        int N; // length of array A
+        cin >> N;
+
+        int X; // initial number of people in the room
+        cin >> X;
+
+        vector<int> A(N);
+        for (int i = 0; i < N; i++) {
+            cin >> A[i];
+        }
+
+        int maxPeople = maxPeopleInRoom(X, A);
+        cout << maxPeople << endl;
+    }
+
+    return 0;
+}
