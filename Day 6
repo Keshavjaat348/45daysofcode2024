@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int T; // number of test cases
+    cin >> T;
+
+    while (T--) {
+        int X; // start time in pm
+        cin >> X;
+
+        int total_time = 3; // total time required to complete all assignments (3 hours)
+        int completion_time = X + total_time; // calculate completion time
+
+        if (completion_time <= 10) {
+            cout << "YES" << endl; // Janmansh can complete all assignments on time
+        } else {
+            cout << "NO" << endl; // Janmansh cannot complete all assignments on time
+        }
+    }
+
+    return 0;
+}
